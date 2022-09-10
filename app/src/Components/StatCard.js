@@ -5,7 +5,7 @@ function StatCard(props) {
     return(
         <div class="stat-card">
             <div>{props.name}</div>
-            <div>{props.score}</div>
+            <div class="score-text">{props.score}</div>
         </div>
     )
 }
