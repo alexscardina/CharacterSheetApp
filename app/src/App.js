@@ -1,14 +1,6 @@
 import './App.css';
 import CharacterInfo from './Components/CharacterInfo';
-import StatCardArray from './Components/StatCardArray';
-import ProfBonus from './Components/ProfBonus';
-import SavingThrows from './Components/SavingThrows';
-import SkillsCard from './Components/SkillsCard';
-
-// consider adding 'Stats' component
-// - can pass stat scores to component
-// - have it render array, profbonus, STs, skills, etc
-// - have it calculate profbonus from level and modifiers from stats
+import Stats from './Components/Stats';
 
 const statsProp = [
   {name: 'Strength', score: '15'},
@@ -23,14 +15,9 @@ function App() {
   return (
     <div class="app app-header">
       <CharacterInfo />
-      <StatCardArray 
-        stats={statsProp}
+      <Stats
+        statsProp={statsProp}
       />
-      <ProfBonus 
-        bonus="2"
-      />
-      <SavingThrows />
-      <SkillsCard />
     </div>
   );
 }
